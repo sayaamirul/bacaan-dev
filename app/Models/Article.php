@@ -9,11 +9,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Comments\Models\Concerns\HasComments;
 
 class Article extends Model
 {
-    use HasComments, HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     public function topics(): BelongsToMany
     {

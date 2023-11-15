@@ -10,12 +10,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Spatie\Comments\Models\Concerns\InteractsWithComments;
-use Spatie\Comments\Models\Concerns\Interfaces\CanComment;
 
-class User extends Authenticatable implements CanComment, FilamentUser
+class User extends Authenticatable implements FilamentUser
 {
-    use HasApiTokens, HasFactory, InteractsWithComments, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that should be hidden for serialization.
@@ -39,7 +37,7 @@ class User extends Authenticatable implements CanComment, FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return str_ends_with($this->email, '@bacaan.dev') && $this->hasVerifiedEmail();
+        return str_ends_with($this->email, '@kawankoding.com') && $this->hasVerifiedEmail();
     }
 
     public function articles(): HasMany
