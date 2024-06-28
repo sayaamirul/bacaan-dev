@@ -16,7 +16,7 @@ class SeriesResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-folder';
 
-    protected static ?string $modelLabel = 'Seri';
+    // protected static ?string $modelLabel = 'Seri';
 
     public static function form(Form $form): Form
     {

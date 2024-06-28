@@ -17,7 +17,7 @@ class TopicResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
 
-    protected static ?string $modelLabel = 'Topik';
+    // protected static ?string $modelLabel = 'Topik';
 
     public static function form(Form $form): Form
     {

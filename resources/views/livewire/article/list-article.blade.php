@@ -1,7 +1,7 @@
 <x-slot name="title">Artikel Pemrograman, Tutorial Koding</x-slot>
 
-<div class="py-6">
-    <div class="grid grid-cols-1 md:grid-cols-2">
+<div>
+    <div class="grid grid-cols-1 gap-2 md:grid-cols-3">
         @foreach ($articles as $article)
             <livewire:components.article-card :article="$article" wire:key="{{ $article->id }}" />
         @endforeach

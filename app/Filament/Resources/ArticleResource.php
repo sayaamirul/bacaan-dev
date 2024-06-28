@@ -18,7 +18,7 @@ class ArticleResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
-    protected static ?string $modelLabel = 'Artikel';
+    // protected static ?string $modelLabel = 'Artikel';
 
     public static function getEloquentQuery(): Builder
     {

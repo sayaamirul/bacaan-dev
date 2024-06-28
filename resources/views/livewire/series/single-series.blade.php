@@ -8,15 +8,15 @@
     {{--    Topic Head --}}
     <div class="prose-lg mx-auto mb-6 max-w-2xl space-y-2">
         <div class="flex justify-center">
-            <img alt="{{ $series->title }}" class="rounded-lg" src="{{ Storage::url($series->thumbnail) }}">
+            <img alt="{{ $series->title }}" class="rounded-2xl shadow-lg" src="{{ Storage::url($series->thumbnail) }}">
         </div>
         <h2 class="text-center text-3xl font-bold">Seri Tutorial {{ $series->title }}</h2>
         <p class="text-center">{{ $series->description }}</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         @forelse($series->articles as $article)
-            <livewire:components.article-card :article="$article"/>
+            <livewire:components.article-card :article="$article" />
         @empty
             <div class="flex justify-center text-center">
                 <p class="text-center">Belum ada artikel dengan topik {{ $topic->title }}</p>

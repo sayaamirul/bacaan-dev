@@ -1,13 +1,13 @@
 <x-slot name="title">Seri Tutorial</x-slot>
 
 <div>
-    <div class="grid grid-cols-2 md:grid-cols-4">
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
         @foreach ($series as $s)
             <div class="card">
                 <figure class="px-10 pt-10">
                     <a href="{{ route('series.single', $s) }}" wire:navigate>
                         <img alt="{{ $s->title }}"
-                            class="cursor-pointer rounded-xl transition duration-500 hover:scale-110"
+                            class="cursor-pointer rounded-2xl shadow-lg transition duration-500 hover:scale-110"
                             src="{{ Storage::url($s->thumbnail) }}" />
                     </a>
                 </figure>

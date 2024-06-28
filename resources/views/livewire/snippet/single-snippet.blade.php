@@ -15,7 +15,7 @@
         @foreach ($snippet->items as $item)
             <h2 class="font-semibold">{{ $item->name }}</h2>
             <p>{{ $item->description }}</p>
-            <x-markdown>{!! $item->content !!}</x-markdown>
+            {!! (new \App\Services\MarkdownRenderer())->render($item->content) !!}
         @endforeach
     </div>
 </div>

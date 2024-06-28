@@ -19,7 +19,7 @@ class HomePage extends Component
                 ->published()
                 ->paginate(10),
             'snippets' => Snippet::inRandomOrder()->take(5)->get(),
-        ])
-            ->layout('components.layouts.three-columns');
+        ]);
+        // ->layout('components.layouts.three-columns');
     }
 }

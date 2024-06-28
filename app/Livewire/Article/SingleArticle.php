@@ -4,6 +4,7 @@ namespace App\Livewire\Article;
 
 use App\Models\Article;
 use App\Models\ArticleView;
+use App\Services\MarkdownRenderer;
 use Livewire\Component;
 
 class SingleArticle extends Component
@@ -19,10 +20,14 @@ class SingleArticle extends Component
 
         if ($this->article->series) {
             $seriesEpisode = [
-                'next' => Article::seriesEpisode($this->article->series_id,
-                    $this->article->episode + 1)->first() ?? null,
-                'prev' => Article::seriesEpisode($this->article->series_id,
-                    $this->article->episode - 1)->first() ?? null,
+                'next' => Article::seriesEpisode(
+                    $this->article->series_id,
+                    $this->article->episode + 1
+                )->first() ?? null,
+                'prev' => Article::seriesEpisode(
+                    $this->article->series_id,
+                    $this->article->episode - 1
+                )->first() ?? null,
             ];
         }
 
@@ -32,8 +37,9 @@ class SingleArticle extends Component
                 ->orderBy('views_count')
                 ->take(5)
                 ->get(),
+            'articleBody' => (new MarkdownRenderer())->render($this->article->content),
             'seriesEpisode' => $seriesEpisode ?? null,
         ])
-            ->layout('components.layouts.three-columns');
+            ->layout('components.layouts.two-columns-right');
     }
 }

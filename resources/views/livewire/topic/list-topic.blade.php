@@ -1,8 +1,8 @@
-<x-slot name="title">Topik</x-slot>
+<x-slot name="title">Topics</x-slot>
 
-<div class="grid grid-cols-1 md:grid-cols-3">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-4">
     @foreach ($topics as $topic)
-        <div class="card">
+        <div class="card rounded-2xl bg-base-100 shadow-lg">
             <div class="card-body justify-center text-center">
                 <a class="flex justify-center" href="{{ route('topic.single', $topic) }}" wire:navigate>
                     <img alt="Tutorial {{ $topic->name }}, Kursus {{ $topic->name }}"
@@ -16,7 +16,7 @@
                     </h1>
                 </a>
                 <h2 class="font-semibold"> ({{ $topic->articles_count }} Artikel)</h2>
-                <p class="">{{ $topic->description }}</p>
+                <p class="text-sm">{{ $topic->description }}</p>
             </div>
         </div>
     @endforeach
