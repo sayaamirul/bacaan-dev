@@ -4,9 +4,9 @@
 </x-slot>
 <x-slot name="thumbnail">{{ Storage::url($series->thumbnail) }}</x-slot>
 
-<div class="py-6">
+<div>
     {{--    Topic Head --}}
-    <div class="prose-lg mx-auto mb-6 max-w-2xl space-y-2">
+    <div class="prose mx-auto max-w-2xl space-y-2 md:prose-lg">
         <div class="flex justify-center">
             <img alt="{{ $series->title }}" class="rounded-2xl shadow-lg" src="{{ Storage::url($series->thumbnail) }}">
         </div>

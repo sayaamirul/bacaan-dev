@@ -5,17 +5,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', \App\Livewire\HomePage::class)->name('home-page');
 
-Route::get('artikel', \App\Livewire\Article\ListArticle::class)->name('article.list');
-Route::get('artikel/{article:slug}', \App\Livewire\Article\SingleArticle::class)->name('article.single');
+Route::get('articles', \App\Livewire\Article\ListArticle::class)->name('article.list');
+Route::get('articles/{article:slug}', \App\Livewire\Article\SingleArticle::class)->name('article.single');
 
-Route::get('snippet', \App\Livewire\Snippet\ListSnippet::class)->name('snippet.list');
-Route::get('snippet/{snippet:slug}', \App\Livewire\Snippet\SingleSnippet::class)->name('snippet.single');
+Route::get('snippets', \App\Livewire\Snippet\ListSnippet::class)->name('snippet.list');
+Route::get('snippets/{snippet:slug}', \App\Livewire\Snippet\SingleSnippet::class)->name('snippet.single');
 
-Route::get('topik', \App\Livewire\Topic\ListTopic::class)->name('topic.list');
-Route::get('topik/{topic:slug}', \App\Livewire\Topic\SingleTopic::class)->name('topic.single');
+Route::get('topics', \App\Livewire\Topic\ListTopic::class)->name('topic.list');
+Route::get('topics/{topic:slug}', \App\Livewire\Topic\SingleTopic::class)->name('topic.single');
 
-Route::get('seri', \App\Livewire\Series\ListSeries::class)->name('series.list');
-Route::get('seri/{series:slug}', \App\Livewire\Series\SingleSeries::class)->name('series.single');
+Route::get('series', \App\Livewire\Series\ListSeries::class)->name('series.list');
+Route::get('series/{series:slug}', \App\Livewire\Series\SingleSeries::class)->name('series.single');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

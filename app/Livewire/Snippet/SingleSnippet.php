@@ -3,7 +3,6 @@
 namespace App\Livewire\Snippet;
 
 use App\Models\Snippet;
-use App\Services\MarkdownRenderer;
 use Livewire\Component;
 
 class SingleSnippet extends Component

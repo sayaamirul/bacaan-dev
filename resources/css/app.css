@@ -1,4 +1,4 @@
-@import "../../vendor/tempest/highlight/src/Themes/Css/one-dark-pro.css";
+@import "../../vendor/tempest/highlight/src/Themes/Css/dracula.css";
 
 @tailwind base;
 @tailwind components;

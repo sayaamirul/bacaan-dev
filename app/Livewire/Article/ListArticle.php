@@ -15,7 +15,7 @@ class ListArticle extends Component
         return view('livewire.article.list-article', [
             'articles' => Article::latest('published_at')
                 ->published()
-                ->paginate(10),
+                ->paginate(9),
         ]);
     }
 }

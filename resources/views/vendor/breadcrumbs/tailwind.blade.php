@@ -4,7 +4,7 @@
             @foreach ($breadcrumbs as $breadcrumb)
                 @if ($breadcrumb->url && !$loop->last)
                     <li>
-                        <a class="link link-accent no-underline" href="{{ $breadcrumb->url }}" wire:navigate>
+                        <a class="link link-primary no-underline" href="{{ $breadcrumb->url }}" wire:navigate>
                             {{ $breadcrumb->title }}
                         </a>
                     </li>

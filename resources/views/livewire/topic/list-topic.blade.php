@@ -6,7 +6,7 @@
             <div class="card-body justify-center text-center">
                 <a class="flex justify-center" href="{{ route('topic.single', $topic) }}" wire:navigate>
                     <img alt="Tutorial {{ $topic->name }}, Kursus {{ $topic->name }}"
-                        class="mb-4 h-24 cursor-pointer transition duration-500 hover:scale-125 md:h-28"
+                        class="mb-4 h-24 cursor-pointer transition duration-500 hover:scale-110 md:h-28"
                         src="{{ Storage::url($topic->icon) }}">
                 </a>
                 <a href="{{ route('topic.single', $topic) }}" wire:navigate>
