@@ -1,6 +1,6 @@
 <x-slot name="title">Artikel {{ $topic->name }}</x-slot>
 <x-slot name="description">
-    Artikel {{ $topic->name }}, Tutorial {{ $topic->name }}, Belajar {{ $topic->name }}, Kursus {{ $topic->name }}
+    Article {{ $topic->name }}, Tutorial {{ $topic->name }}, Learn {{ $topic->name }}, {{ $topic->name }} Course
 </x-slot>
 <x-slot name="thumbnail">{{ Storage::url($topic->icon) }}</x-slot>
 
@@ -11,7 +11,7 @@
                 src="{{ Storage::url($topic->icon) }}">
         </div>
         <div class="prose-lg mx-auto my-6 max-w-2xl justify-center space-y-2">
-            <h2 class="font-bold">Artikel tentang {{ $topic->name }}</h2>
+            <h2 class="font-bold">Articles about {{ $topic->name }}</h2>
             <p>{{ $topic->description }}</p>
         </div>
     </div>
@@ -33,7 +33,7 @@
                 <path d="M15 10l.01 0"></path>
                 <path d="M9 15l6 0"></path>
             </svg>
-            <h2 class="text-xl font-bold text-error">Belum ada artikel dengan topik {{ $topic->name }} !</h2>
+            <h2 class="text-xl font-bold text-error">Currently no articles about {{ $topic->name }} !</h2>
             <svg class="icon icon-tabler icon-tabler-mood-empty h-8 w-8 text-error" fill="none" height="24"
                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor"
                 viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">

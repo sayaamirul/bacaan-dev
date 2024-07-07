@@ -1,7 +1,6 @@
-<footer class="footer footer-center rounded bg-base-100 p-10 text-base-content">
+<footer class="footer footer-center rounded p-10 text-base-content">
     <nav class="grid grid-flow-col gap-4">
-        <a class="link link-primary no-underline">About Us</a>
-        <a class="link link-primary no-underline">Contact Us</a>
+        <a class="link link-primary no-underline">About Me</a>
     </nav>
     <nav>
         <div class="grid grid-flow-col gap-4">

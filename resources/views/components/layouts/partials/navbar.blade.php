@@ -1,4 +1,4 @@
-<div class="bg-base-100">
+<div>
     <div class="container navbar mx-auto max-w-screen-xl">
         <div class="navbar-start">
             <div class="dropdown">
