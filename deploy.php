@@ -6,12 +6,12 @@ require 'recipe/laravel.php';
 
 // Config
 // NVM source, must be called every run command
-set('nvm', 'source $HOME/.nvm/nvm.sh &&');
+// set('nvm', 'source $HOME/.nvm/nvm.sh &&');
 
-task('test', function () {
-    $test = run("{{nvm}} npm --version");
-    writeln($test);
-});
+// task('test', function () {
+//     $test = run("{{nvm}} npm --version");
+//     writeln($test);
+// });
 
 task('build', function () {
     cd('{{release_path}}');
