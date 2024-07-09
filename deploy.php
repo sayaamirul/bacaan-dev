@@ -5,6 +5,11 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Config
+task('build', function () {
+    cd('{{release_path}}');
+    run('npm install');
+    run('npm run build');
+});
 
 set('repository', 'https://github.com/mai92/bacaan-dev.git');
 
