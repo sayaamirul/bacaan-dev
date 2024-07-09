@@ -5,9 +5,12 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Config
-set('nvm', 'source $HOME/.nvm/nvm.sh');
-set('use_nvm', function () {
-    return '{{nvm}} && node --version && nvm use 18';
+// NVM source, must be called every run command
+set('nvm', 'source $HOME/.nvm/nvm.sh &&');
+
+task('test', function () {
+    $test = run("{{nvm}} npm --version");
+    writeln($test);
 });
 
 task('build', function () {
