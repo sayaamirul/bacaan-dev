@@ -4,7 +4,7 @@
     <section class="mt-6 md:mb-16 md:mt-16">
         <hgroup class="text-balance mx-auto mt-6 text-center">
             <h1 class="py-2 text-[2.85rem] font-bold leading-[1] md:text-[4rem]">
-                Learn Laravel & The Ecosystems v2</h1>
+                Learn Laravel & The Ecosystems v3</h1>
         </hgroup>
         <div class="mx-auto flex scale-[70%] items-center justify-center space-x-4 md:scale-[80%] md:space-x-7">
             <div
