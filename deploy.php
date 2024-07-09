@@ -5,6 +5,8 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Config
+set('nvm', 'source $HOME/.nvm/nvm.sh');
+
 task('build', function () {
     cd('{{release_path}}');
     run('npm install');
