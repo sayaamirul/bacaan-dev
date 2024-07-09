@@ -6,6 +6,9 @@ require 'recipe/laravel.php';
 
 // Config
 set('nvm', 'source $HOME/.nvm/nvm.sh');
+set('use_nvm', function () {
+    return '{{nvm}} && node --version && nvm use 18';
+});
 
 task('build', function () {
     cd('{{release_path}}');
